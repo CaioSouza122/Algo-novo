@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     <title>Document</title>
 </head>
 <body>
+     <script src="{{ url_for('static', filename='js/script.js') }}"></script> <!--Linkando o Script JS com o Back (Deixando aqui pq rodava rapido d+)-->
    <!--Criando Site de Chamados de Suporte Técnico-->
    <div class ="container">
     <h1>Suporte Técnico</h1>
-    <form id="supportForm">
+    <form id="supportForm" action="/submit" method="post" enctype="multipart/form-data"><!--Adicionando enctype para Suporte de Upload de Arquivo e Linkando com o Back-->
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required>
 
